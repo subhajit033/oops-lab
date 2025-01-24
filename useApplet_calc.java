@@ -10,7 +10,7 @@ public class useApplet_calc extends Applet implements ActionListener {
     @Override
     public void init() {
         // Set layout
-        setLayout(new GridLayout(5, 2, 5, 5));
+        // setLayout(new GridLayout(5, 2, 5, 5));
 
         // Create components
         Label label1 = new Label("Number 1:");
@@ -61,19 +61,19 @@ public class useApplet_calc extends Applet implements ActionListener {
             double num2 = Double.parseDouble(input2.getText());
 
             // Perform the selected operation
-            if (e.getSource() == add) {
+            if (e.getActionCommand() == "Add") {
                 result.setText(String.valueOf(num1 + num2));
-            } else if (e.getSource() == subtract) {
+            } else if (e.getActionCommand() == "Subtract") {
                 result.setText(String.valueOf(num1 - num2));
-            } else if (e.getSource() == multiply) {
+            } else if (e.getActionCommand() == "Multiply") {
                 result.setText(String.valueOf(num1 * num2));
-            } else if (e.getSource() == divide) {
+            } else if (e.getActionCommand() == "Divide") {
                 if (num2 != 0) {
                     result.setText(String.valueOf(num1 / num2));
                 } else {
                     result.setText("Error: Division by zero");
                 }
-            } else if (e.getSource() == clear) {
+            } else if (e.getActionCommand() == "Clear") {
                 input1.setText("");
                 input2.setText("");
                 result.setText("");

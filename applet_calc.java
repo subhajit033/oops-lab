@@ -73,6 +73,7 @@ public class applet_calc extends JFrame implements ActionListener {
 
             // Perform the selected operation
             if (e.getSource() == add) {
+                System.out.println(e.getActionCommand());
                 result.setText(String.valueOf(num1 + num2));
             } else if (e.getSource() == subtract) {
                 result.setText(String.valueOf(num1 - num2));
